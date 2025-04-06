@@ -1,7 +1,7 @@
 import crypto from "crypto";
 import { User } from "../models/user.js";
 
-import { compare } from "bcrypt";
+import { compare } from "bcryptjs";
 import {
   cookieOptions,
   sendToken,
