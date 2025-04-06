@@ -95,7 +95,7 @@ const Login = () => {
         formData,
         config
       );
-
+      console.log(server);
       dispatch(userExists(data.user));
       toast.success(data.message, {
         id: toastId,

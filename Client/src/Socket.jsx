@@ -8,7 +8,7 @@ const GetSocket = () => useContext(SocketContext);
 
 const SocketProvider = ({ children }) => {
   const socket = useMemo(
-    () => io("http://localhost:5000", { withCredentials: true }),
+    () => io("http://localhost:10000", { withCredentials: true }),
     []
   );
 
