@@ -13,7 +13,7 @@ export const cookieOptions = {
 
 export const connectDb = (uri) => {
   mongoose
-    .connect(uri, { dbName: "Sandesh-Chat-App" })
+    .connect(uri, { dbName: "Sandesh-chat-app" })
     .then((data) =>
       console.log("database connected successfully", data.connection.host)
     )
