@@ -30,7 +30,11 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:4173", "http://localhost:5173"],
+    origin: [
+      "http://localhost:4173",
+      "http://localhost:5173",
+      process.env.CLIENT_URL,
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -42,7 +46,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:4173", "http://localhost:5173"],
+    origin: [
+      "http://localhost:4173",
+      "http://localhost:5173",
+      process.env.CLIENT_URL,
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -69,8 +77,7 @@ app.use("/chat", chatRoute);
 app.use("/admin", adminRoute);
 
 connectDb(uri);
-// createMessagesInAChat("67b992d2dd42f4488d7a6ec0", 50);
-// createMessages(20);
+
 // Routes
 app.get("/", (req, res) => {
   res.send("Hello world");
