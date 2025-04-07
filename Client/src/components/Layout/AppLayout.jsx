@@ -52,7 +52,6 @@ const AppLayout = () => (WrappedComponent) => {
     useErrors([isError]);
 
     const newRequestListener = useCallback(() => {
-      console.log("hello moto");
       dispatch(incrementNotification());
     }, [dispatch]);
 

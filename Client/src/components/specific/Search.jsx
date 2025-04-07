@@ -32,7 +32,6 @@ const Search = () => {
   );
 
   const addFriendHandler = async (id) => {
-    console.log(id);
     await sendFriendRequest("Sending friend request...", { userId: id });
   };
 

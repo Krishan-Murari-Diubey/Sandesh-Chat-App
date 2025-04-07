@@ -44,7 +44,6 @@ const FileMenu = ({ anchorE1, chatId }) => {
     closeFileMenu();
 
     try {
-      console.log(chatId);
       const myForm = new FormData();
 
       myForm.append("chatId", chatId);

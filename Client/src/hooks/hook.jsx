@@ -37,7 +37,6 @@ const useAsyncMutation = (mutatationHook) => {
         });
       }
     } catch (error) {
-      console.log(error);
       toast.error("Something went wrong", { id: toastId });
     } finally {
       setIsLoading(false);
@@ -49,10 +48,8 @@ const useAsyncMutation = (mutatationHook) => {
 
 const useSocketEvents = (socket, handlers) => {
   useEffect(() => {
-    console.log("Registered event handlers: ", Object.keys(handlers));
     Object.entries(handlers).forEach(([event, handler]) => {
       socket.on(event, handler);
-      console.log(socket.on(event, handler));
     });
 
     return () => {
