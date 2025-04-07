@@ -49,8 +49,10 @@ const useAsyncMutation = (mutatationHook) => {
 
 const useSocketEvents = (socket, handlers) => {
   useEffect(() => {
+    console.log("Registered event handlers: ", Object.keys(handlers));
     Object.entries(handlers).forEach(([event, handler]) => {
       socket.on(event, handler);
+      console.log(socket.on(event, handler));
     });
 
     return () => {

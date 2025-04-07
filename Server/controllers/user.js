@@ -4,6 +4,7 @@ import { User } from "../models/user.js";
 import { compare } from "bcryptjs";
 import {
   cookieOptions,
+  emitEvent,
   sendToken,
   uploadFilesToCloudinary,
 } from "../utils/features.js";

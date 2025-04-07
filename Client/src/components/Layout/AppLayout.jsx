@@ -52,6 +52,7 @@ const AppLayout = () => (WrappedComponent) => {
     useErrors([isError]);
 
     const newRequestListener = useCallback(() => {
+      console.log("hello moto");
       dispatch(incrementNotification());
     }, [dispatch]);
 
@@ -73,7 +74,6 @@ const AppLayout = () => (WrappedComponent) => {
     }, [refetch, navigate]);
 
     const onlineUsersListener = useCallback((data) => {
-      console.log(data);
       setOnlineUsers(data);
     }, []);
 

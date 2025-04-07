@@ -39,7 +39,7 @@ const Notifications = () => {
   const closeHandler = () => dispatch(setIsNotification(false));
 
   useErrors([{ error, isError }]);
-  console.log(data);
+
   return (
     <Dialog open={isNotification} onClose={closeHandler}>
       <Stack p={{ xs: "1rem", sm: "2rem" }} maxWidth={"25rem"}>
