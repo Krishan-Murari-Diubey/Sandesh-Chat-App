@@ -11,6 +11,7 @@ import { TryCatch } from "../middlewares/ErrorMiddleware.js";
 import { Chat } from "../models/chat.js";
 import { Request } from "../models/request.js";
 import { getOtherMember } from "../lib/helper.js";
+import { NEW_REQUEST, REFETCH_CHATS } from "../constants/events.js";
 export const newUser = TryCatch(async (req, res, next) => {
   const { name, bio, username, password } = req.body;
   const file = req.file;
